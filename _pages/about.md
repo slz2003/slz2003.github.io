@@ -9,7 +9,7 @@ redirect_from:
 
 About Me
 ======
-I'm Lize Shao, and I earned my undergraduate degree from [Rice University](https://www.rice.edu/) in 2025, where I completed a dual major in Mathematics and Computer Science. I had the privilege of working with [Prof. Xia](https://cs.rice.edu/~xh37/index.html) Hu and [Prof. Tegawendé F. Bissyandé](https://bissyande.github.io/) during my studies.
+I'm Lize Shao, and I earned my undergraduate degree from [Rice University](https://www.rice.edu/) in 2025, where I completed a dual major in Mathematics and Computer Science. I had the privilege of working with [Prof. Xia](https://cs.rice.edu/~xh37/index.html) Hu and [Prof. Tegawendé F. Bissyandé](https://bissyande.github.io/) during my undergraduate studies.
 
 From 2021 to 2025, I was honored to be a recipient of the Rice Trustee Distinguished Scholarship.
 
