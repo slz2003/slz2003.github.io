@@ -22,9 +22,9 @@ I am an incoming Ph.D Student at [University of Virginia](https://www.virginia.e
 Research Interest
 ======
 
-- [MathJax] LLMs for Software Engineering
-- [MathJax] Formal Methods
-- [MathJax] Machine Learning
+-  LLMs for Software Engineering
+-  Formal Methods
+-  Machine Learning
 
 
 <p style="color:red; font-weight:bold;">This website is still under construction—thank you for your patience!
