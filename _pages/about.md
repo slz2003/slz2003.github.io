@@ -27,4 +27,4 @@ Research Interest
 - [MathJax] Machine Learning
 
 
-This website is still under construction—thank you for your patience!
+<p style="color:red; font-weight:bold;">This website is still under construction—thank you for your patience!
