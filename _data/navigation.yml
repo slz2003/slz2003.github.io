@@ -12,7 +12,7 @@ main:
     url: /publications/
     
   - title: "CV"
-    url: /RenderCV_sb2nov_Theme__Version_457_/
+    url: _data/RenderCV_sb2nov_Theme__Version_457_.pdf
     
   # - title: "CV"
   #   url: /cv-json/
