@@ -1,13 +1,21 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "MQUAKE-REMASTERED: MULTI-HOP KNOWLEDGE EDITING CAN ONLY BE ADVANCED WITH RELIABLE EVALUATIONS"
 collection: publications
 category: conferences
+selected: true
 permalink: /publication/2024-02-17-paper-title-number-4
+link: 'https://openreview.net/pdf?id=m9wG6ai2Xk'
 excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+date: 2025-02-17
+venue: 'ICLR(Spotlight)'
+authors: 'Shaochen Zhong, Yifan Lu, Lize Shao, Bhargav Bhushanam and more authors'
+header:
+  teaser: 'M.png'
+absurl: 'https://openreview.net/pdf?id=m9wG6ai2Xk'
+htmlurl: 'https://openreview.net/pdf?id=m9wG6ai2Xk'
+paperurl: 'https://openreview.net/pdf?id=m9wG6ai2Xk'
+bibtexurl: 'https://openreview.net/pdf?id=m9wG6ai2Xk'
+citation: 'https://openreview.net/pdf?id=m9wG6ai2Xk'
 ---
 
 Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
