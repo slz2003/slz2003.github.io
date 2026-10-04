@@ -1,0 +1,25 @@
+---
+layout: default
+title: publications
+permalink: /publications/
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">publications</h1>
+    <p class="post-description">
+      See also my <a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a> profile.
+    </p>
+  </header>
+
+  <article>
+    <div class="publications">
+      {% assign by_year = site.data.publications | group_by: "year" %}
+      {% for group in by_year %}
+        <h2 class="bibliography">{{ group.name }}</h2>
+        <ol class="bibliography">
+          {% for pub in group.items %}{% include publication.html %}{% endfor %}
+        </ol>
+      {% endfor %}
+    </div>
+  </article>
+</div>

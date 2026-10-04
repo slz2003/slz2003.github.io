@@ -1,0 +1,246 @@
+# Newest first. Set `selected: true` to also show a paper on the about page.
+# Content mirrors the CV (slz2003-cv/Lize_Shao_CV.tex).
+#   abbr       - badge under the thumbnail
+#   venue      - short venue (bold), venue_full - full venue name (optional)
+#   authors    - `me: true` underlines your name; `url` makes the name a link
+#   paper      - link for the "Paper" button
+#   abstract   - text for the "Abs" button (optional)
+#   bibtex     - text for the "Bib" button (optional)
+
+- title: Constrained Code Generation with Discrete Diffusion
+  abbr: NeurIPS 2026
+  venue: NeurIPS 2026
+  venue_full: The Fortieth Annual Conference on Neural Information Processing Systems
+  year: 2026
+  preview: cdc_overview.png
+  selected: true
+  authors:
+    - name: Lize Shao
+      me: true
+    - name: Michael Cardei
+    - name: Zichen Xie
+    - name: Ferdinando Fioretto
+    - name: Wenxi Wang
+  paper: https://arxiv.org/abs/2605.16829
+  abstract: >-
+    Discrete diffusion models are a powerful, emerging paradigm for code generation. They construct programs through
+    iterative refinement of partially corrupted token sequences and enable parallel token refinement. Importantly, this
+    paradigm exposes a global program state at each denoising step, which provides a natural intervention point for
+    enforcing program-level functionality and security constraints, guiding the generation before the final code is
+    committed. Building on this observation, the paper introduces Constrained Diffusion for Code (CDC), a training-free
+    neurosymbolic inference framework that integrates constraint satisfaction directly into the reverse denoising
+    process. CDC augments the base discrete diffusion sampler with constraint-aware denoising operators that combine
+    mathematical optimization with program analysis to identify constraint-relevant regions of the intermediate program
+    state and locally adjust the denoising trajectory, steering generation toward feasible programs while remaining
+    close to the base model. Across code generation benchmarks, CDC consistently improves constraint satisfaction in
+    functional correctness, security, and even syntax, outperforming discrete diffusion and autoregressive baselines
+    with less corrective computation and more localized edits.
+  bibtex: |
+    @inproceedings{shao2026constrained,
+      title     = {Constrained Code Generation with Discrete Diffusion},
+      author    = {Shao, Lize and Cardei, Michael and Xie, Zichen and Fioretto, Ferdinando and Wang, Wenxi},
+      booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+      year      = {2026}
+    }
+
+- title: "VeriContest: A Competitive-Programming Benchmark for Verifiable Code Generation"
+  abbr: NeurIPS 2026
+  venue: NeurIPS 2026
+  venue_full: The Fortieth Annual Conference on Neural Information Processing Systems
+  year: 2026
+  preview: vericontest.png
+  selected: true
+  authors:
+    - name: Zichen Xie
+    - name: Mrigank Pawagi
+    - name: Yuxin Liu
+    - name: Aaditi Rai
+    - name: Lize Shao
+      me: true
+    - name: John Berberian Jr.
+    - name: Sicong Che
+    - name: Wenxi Wang
+  paper: https://arxiv.org/abs/2605.08553
+  abstract: >-
+    Large language models can generate useful code from natural language, but their outputs come without correctness
+    guarantees. Verifiable code generation offers a path beyond testing by requiring models to produce not only
+    executable code, but also formal specifications and machine-checkable proofs. Progress in this direction, however,
+    is difficult to measure: existing benchmarks are often small, focus on only one part of the pipeline, lack
+    ground-truth proofs or rigorous specification validation, or target verification settings far from mainstream
+    software development. We present VeriContest, a benchmark of 946 competitive-programming problems from LeetCode and
+    Codeforces for verifiable code generation in Rust with Verus. Each problem pairs a natural language description with
+    expert-validated formal specifications, judge-accepted Rust code, Verus-checked proofs, and positive and negative
+    test suites. VeriContest is constructed through a three-phase pipeline that scales from manually verified seed
+    problems to semi-automated expansion with human-in-the-loop review. To further strengthen benchmark quality, we use
+    testing as an additional quality-assurance layer for validating postcondition completeness. VeriContest supports
+    isolated and compositional evaluation of specification generation, code generation, proof generation, and
+    end-to-end verified program synthesis. Evaluating ten state-of-the-art models reveals a sharp gap between coding
+    ability and verifiable code generation: the strongest model reaches 92.18% on natural-language-to-code generation,
+    but only 48.31% on specification generation, 13.95% on proof generation, and 5.29% end-to-end. These results
+    identify proof and specification generation as the central bottlenecks for models and establish VeriContest as a
+    rigorous platform for measuring and training future systems that generate code with machine-checkable correctness.
+  bibtex: |
+    @inproceedings{xie2026vericontest,
+      title     = {VeriContest: A Competitive-Programming Benchmark for Verifiable Code Generation},
+      author    = {Xie, Zichen and Pawagi, Mrigank and Liu, Yuxin and Rai, Aaditi and Shao, Lize and Berberian Jr., John and Che, Sicong and Wang, Wenxi},
+      booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+      year      = {2026}
+    }
+
+- title: "RFCScope: Detecting Logical Ambiguities in Internet Protocol Specifications"
+  abbr: ASE 2025
+  venue: ASE 2025
+  venue_full: The 40th IEEE/ACM International Conference on Automated Software Engineering
+  year: 2025
+  preview: rfcscope.png
+  selected: true
+  authors:
+    - name: Mrigank Pawagi
+    - name: Lize Shao
+      me: true
+    - name: Hyeonmin Lee
+    - name: Yixin Sun
+    - name: Wenxi Wang
+  paper: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11334266
+  abstract: >-
+    Internet protocol specifications, published as Requests for Comments (RFCs) by the IETF organization, are essential
+    to ensuring the interoperability, security, and reliability of the Internet. However, ambiguities in these
+    specifications, particularly logical ambiguities such as inconsistencies and under-specifications, can lead to
+    critical misinterpretations and implementation errors. Unfortunately, such ambiguities remain largely overlooked and
+    challenging to detect with existing tools. In this paper, we present the first systematic study of verified
+    technical errata from Standards Track RFCs over the past 11 years, identifying seven distinct subtypes of logical
+    ambiguities. Building on these insights, we introduce RFCScope, the first scalable framework for detecting logical
+    ambiguities in RFCs. RFCScope employs large language models (LLMs) through a modular pipeline that constructs
+    targeted cross-document context, partitions specifications to preserve semantic integrity, applies bug-type-aware
+    prompts for detection, and filters out false positives using structured reasoning validation. RFCScope uncovers 31
+    new logical ambiguities spanning all seven subtypes across 14 recent RFCs. Eight of these have been confirmed by RFC
+    authors, with three officially verified as technical errata. Our results demonstrate that RFCScope offers a
+    practical solution for improving the clarity, consistency, and reliability of protocol standards through ambiguity
+    detection.
+  bibtex: |
+    @inproceedings{pawagi2025rfcscope,
+      title     = {RFCScope: Detecting Logical Ambiguities in Internet Protocol Specifications},
+      author    = {Pawagi, Mrigank and Shao, Lize and Lee, Hyeonmin and Sun, Yixin and Wang, Wenxi},
+      booktitle = {The 40th IEEE/ACM International Conference on Automated Software Engineering},
+      year      = {2025}
+    }
+
+- title: "MQuAKE-Remastered: Multi-Hop Knowledge Editing Can Only Be Advanced with Reliable Evaluations"
+  abbr: ICLR 2025
+  venue: ICLR 2025
+  venue_full: The Thirteenth International Conference on Learning Representations
+  year: 2025
+  preview: mquake.png
+  selected: true
+  authors:
+    - name: Shaochen Zhong
+    - name: Yifan Louie Lu
+    - name: Lize Shao
+      me: true
+    - name: Bhargav Bhushanam
+    - name: "…"
+    - name: Vipin Chaudhary
+    - name: Xia Ben Hu
+      url: https://cs.rice.edu/~xh37/index.html
+  paper: https://proceedings.iclr.cc/paper_files/paper/2025/file/f782860c2a5d8f675b0066522b8c2cf2-Paper-Conference.pdf
+  abstract: >-
+    Large language models (LLMs) can give out erroneous answers to factually rooted questions either as a result of
+    undesired training outcomes or simply because the world has moved on after a certain knowledge cutoff date. Under
+    such scenarios, knowledge editing often comes to the rescue by delivering efficient patches for such erroneous
+    answers without significantly altering the rest, where many editing methods have seen reasonable success when the
+    editing targets are simple and direct (e.g., “what club does Lionel Messi currently play for?”). However, knowledge
+    fragments like this are often deeply intertwined in the real world, making effectively propagating the editing
+    effect to non-directly related questions a practical challenge (to entertain an extreme example: “What car did the
+    wife of the owner of the club that Messi currently plays for used to get to school in the 80s?”). Prior arts have
+    coined this task as multi-hop knowledge editing with the most popular dataset being MQuAKE, serving as the sole
+    evaluation benchmark for many later proposed editing methods due to the expensive nature of constructing knowledge
+    editing datasets at scale. In this work, we reveal that up to 33% or 76% of MQuAKE’s questions and ground truth
+    labels are, in fact, corrupted in various fashions due to some unintentional clerical or procedural oversights. Our
+    work provides a detailed audit of MQuAKE’s error pattern and a comprehensive fix without sacrificing its dataset
+    capacity. Additionally, we benchmarked almost all proposed MQuAKE-evaluated editing methods on our post-fix dataset,
+    MQuAKE-Remastered. We observe that many methods try to overfit the original MQuAKE by exploiting some dataset
+    idiosyncrasies of MQuAKE. We provide a guideline on how to approach such datasets faithfully and show that a simple,
+    minimally invasive approach — GWalk — can offer beyond SOTA editing performance without such exploitation. The
+    MQuAKE-Remastered datasets and utilities are available at huggingface.co/datasets/henryzhongsc/MQuAKE-Remastered
+    and github.com/henryzhongsc/MQuAKE-Remastered, respectively.
+  bibtex: |
+    @inproceedings{zhong2025mquake,
+      title     = {MQuAKE-Remastered: Multi-Hop Knowledge Editing Can Only Be Advanced with Reliable Evaluations},
+      author    = {Zhong, Shaochen and Lu, Yifan Louie and Shao, Lize and Bhushanam, Bhargav and Du, Xiaocong and Wan, Yixin and Shi, Yucheng and Zha, Daochen and Wang, Yiwei and Liu, Ninghao and Zhou, Kaixiong and Chang, Kai-Wei and Feng, Louis and Chaudhary, Vipin and Hu, Xia Ben},
+      booktitle = {The Thirteenth International Conference on Learning Representations},
+      year      = {2025}
+    }
+
+- title: Detecting Inconsistencies in Model Specifications with LLM-as-Verifier Reasoning
+  abbr: Preprint
+  venue: Preprint
+  year: 2026
+  preview: inconsistency.png
+  selected: true
+  authors:
+    - name: Zichen Xie
+    - name: Mrigank Pawagi
+    - name: Lize Shao
+      me: true
+    - name: Yang Hu
+    - name: Wenxi Wang
+  paper: https://arxiv.org/abs/2610.01847
+  abstract: >-
+    Model specifications define how large language models (LLMs) should behave, guiding alignment training,
+    inference-time behavior, and evaluation. Yet these specifications may themselves contain defects: two individually
+    reasonable principles may prescribe incompatible behavior when applied to the same situation, leaving no response
+    that satisfies both. Detecting such inconsistencies is challenging. Formalizing natural-language specifications
+    risks losing subtle distinctions, while behavior-based testing cannot reliably distinguish specification defects
+    from differences in model behavior. We introduce VeriSpec, the first approach to directly detect inconsistencies in
+    model specifications by auditing the specification text itself. Our key insight is to preserve the specification in
+    natural language while using an LLM as a verifier. VeriSpec extracts structured, context-aware rules, constructs a
+    topic-guided graph to cluster behaviorally related rules at the same authority level, and applies LLM-as-verifier
+    reasoning to detect inconsistencies. Applying VeriSpec to the OpenAI Model Spec, we extract 405 rules and manually
+    validate five inconsistencies, all reported to its developers, who responded positively and have initiated internal
+    discussions. Compared with five baselines, VeriSpec identifies the most validated inconsistencies, achieves the
+    highest precision (38.5%), and incurs the lowest cost per validated inconsistency ($11.12). These results establish
+    direct specification auditing as a practical complement to behavioral alignment evaluation, catching defects at the
+    source before they shape any model. The code is available at https://github.com/HIPREL-Group/VeriSpec.
+  bibtex: |
+    @article{xie2026detecting,
+      title   = {Detecting Inconsistencies in Model Specifications with LLM-as-Verifier Reasoning},
+      author  = {Xie, Zichen and Pawagi, Mrigank and Shao, Lize and Hu, Yang and Wang, Wenxi},
+      journal = {arXiv preprint arXiv:2610.01847},
+      year    = {2026}
+    }
+
+- title: "HoCoS: Hyperbolic Representation Towards Code Search"
+  abbr: Preprint
+  venue: Preprint
+  year: 2024
+  preview: hocos.png
+  selected: true
+  authors:
+    - name: Xunzhu Tang
+    - name: Lize Shao
+      me: true
+    - name: Yewei Song
+    - name: Saad Ezzini
+    - name: Haoye Tian
+    - name: Jiechao Gao
+    - name: Jacques Klein
+    - name: Tegawendé F. Bissyandé
+      url: https://bissyande.github.io/
+  paper: https://www.researchgate.net/publication/386013414_HoCoS_Hyperbolic_Representation_Towards_Code_Search
+  abstract: >-
+    Code and text concepts naturally organize themselves in a hierarchy, where a textual concept "extends" entails all
+    codes that inherit an existing class. Despite being intuitive, current large-scale code and text models such as
+    CodeBERT (Feng et al., 2020a) do not explicitly capture such hierarchy. To address this, we propose HoCoS, a novel
+    approach yielding hyperbolic space for both codes and texts. Hyperbolic spaces have suitable geometric properties to
+    embed tree-like data, so HoCoS can better capture the underlying hierarchy in code-text datasets. We frame the code
+    retrieval task as question-answering (QA) matching, constructing a dataset of triple matches: <negative code,
+    description, positive code>. HoCoS enables self-organization, detecting hierarchical patterns during learning. Our
+    results show that HoCoS learns a highly interpretable and structured representation in overperforming the code
+    search task while competitive with state-of-the-art techniques, improving 3.5% to 4% on all metrics on average.
+  bibtex: |
+    @misc{tang2024hocos,
+      title  = {HoCoS: Hyperbolic Representation Towards Code Search},
+      author = {Tang, Xunzhu and Shao, Lize and Song, Yewei and Ezzini, Saad and Tian, Haoye and Gao, Jiechao and Klein, Jacques and Bissyand{\'e}, Tegawend{\'e} F.},
+      note   = {Preprint},
+      year   = {2024}
+    }

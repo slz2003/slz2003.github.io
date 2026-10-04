@@ -1,0 +1,18 @@
+# Newest first. `content` may contain HTML.
+- date: Sep 2026
+  content: >-
+    Two papers accepted to <b>NeurIPS 2026</b>:
+    <a href="https://arxiv.org/abs/2605.16829">Constrained Code Generation with Discrete Diffusion</a> (Main Track) and
+    <a href="https://arxiv.org/abs/2605.08553">VeriContest</a> (Datasets and Benchmarks Track)!
+- date: Sep 2025
+  content: >-
+    <a href="https://wenxiwang.github.io/papers/rfcscope/rfcscope_paper.pdf">RFCScope</a> was accepted to <b>ASE 2025</b>!
+- date: Aug 2025
+  content: >-
+    Started my Ph.D. in Computer Science at the <a href="https://www.virginia.edu/">University of Virginia</a>.
+- date: May 2025
+  content: >-
+    Graduated from <a href="https://www.rice.edu/">Rice University</a> with a dual degree in Mathematics and Computer Science.
+- date: Jan 2025
+  content: >-
+    <a href="https://openreview.net/pdf?id=m9wG6ai2Xk">MQuAKE-Remastered</a> was accepted to <b>ICLR 2025</b> as a Spotlight.

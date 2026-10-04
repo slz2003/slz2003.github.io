@@ -1,0 +1,437 @@
+/* Styles adapted from the al-folio Jekyll theme (MIT), https://github.com/alshedivat/al-folio */
+
+:root {
+  --global-bg-color: #fff;
+  --global-text-color: #000;
+  --global-text-color-light: #828282;
+  --global-theme-color: #0969da;
+  --global-hover-color: #0969da;
+  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-badge-bg-color: #0969da;
+  --global-code-bg-color: #f6f8fa;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #1c1c1d;
+  --global-text-color: #e8e8e8;
+  --global-text-color-light: #828282;
+  --global-theme-color: #58a6ff;
+  --global-hover-color: #58a6ff;
+  --global-divider-color: #424246;
+  --global-badge-bg-color: #0969da;
+  --global-code-bg-color: #2c3237;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 450ms !important;
+  transition-delay: 0s !important;
+}
+
+body {
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+}
+
+body.fixed-top-nav {
+  padding-top: 56px;
+}
+
+.container {
+  max-width: 930px;
+}
+
+a,
+table.table a {
+  color: var(--global-theme-color);
+}
+
+a:hover,
+table.table a:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--global-text-color);
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 a,
+h2 a:hover {
+  color: inherit;
+}
+
+/* Navbar */
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--global-divider-color);
+  background-color: var(--global-bg-color);
+  opacity: 0.95;
+}
+
+.navbar.navbar-light a:hover {
+  text-decoration: none;
+}
+
+.navbar.navbar-light .navbar-brand {
+  color: var(--global-text-color);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: var(--global-text-color);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: var(--global-hover-color);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  background-color: inherit;
+  font-weight: bolder;
+  color: var(--global-theme-color);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--global-text-color);
+  border-radius: 1px;
+  margin-bottom: 4px;
+  transition: all 0.2s;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar,
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+
+/* Theme toggle: show only the icon for the current setting */
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+#light-toggle {
+  padding: 0.5rem;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+}
+
+#light-toggle:hover {
+  color: var(--global-hover-color);
+}
+
+#light-toggle i {
+  display: none;
+}
+
+html[data-theme-setting="system"] #light-toggle-system,
+html[data-theme-setting="dark"] #light-toggle-dark,
+html[data-theme-setting="light"] #light-toggle-light {
+  display: inline-block;
+}
+
+@media (max-width: 575.98px) {
+  .toggle-container {
+    justify-content: flex-end;
+  }
+}
+
+/* Page header */
+
+.post-header {
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+}
+
+.desc {
+  color: var(--global-text-color);
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.post-description {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
+}
+
+/* Photo floats right so the name and bio sit beside it */
+.profile {
+  width: 30%;
+  max-width: 270px;
+  margin-left: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.profile figure {
+  margin: 0;
+}
+
+.profile img {
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .profile {
+    width: 40%;
+    margin-left: 1rem;
+  }
+}
+
+article {
+  margin-top: 2rem;
+}
+
+.social-icons {
+  font-size: 1.4rem;
+}
+
+.social-icons a {
+  color: var(--global-text-color);
+  margin-right: 0.9rem;
+}
+
+.social-icons a:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+/* News */
+
+.news table {
+  color: var(--global-text-color);
+}
+
+.news table th {
+  width: 20%;
+  min-width: 90px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.news table td,
+.news table th {
+  padding-left: 0;
+}
+
+/* Academic service / awards lists */
+
+.cv-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.cv-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.cv-list li .year {
+  flex-shrink: 0;
+  color: var(--global-text-color-light);
+}
+
+/* Publications */
+
+.publications {
+  margin-top: 1rem;
+}
+
+.publications h2.bibliography {
+  color: var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+html[data-theme="dark"] .publications h2.bibliography {
+  color: var(--global-text-color-light);
+}
+
+.publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.publications ol.bibliography li {
+  margin-bottom: 1.25rem;
+}
+
+.publications ol.bibliography li figure {
+  margin-bottom: 0.5rem;
+}
+
+.publications ol.bibliography li img.preview {
+  box-shadow: none !important;
+  width: 100%;
+  border: 1px solid var(--global-divider-color);
+  background: #fff;
+}
+
+.publications ol.bibliography li .abbr {
+  margin-bottom: 0.5rem;
+}
+
+.publications ol.bibliography li .abbr abbr {
+  display: inline-block;
+  background-color: var(--global-badge-bg-color);
+  color: #fff;
+  box-shadow: none;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  border-bottom: none;
+  cursor: default;
+}
+
+.publications ol.bibliography li .title {
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  .publications ol.bibliography li img.preview {
+    max-width: 280px;
+  }
+}
+
+.publications ol.bibliography li .author a {
+  border-bottom: 1px dashed var(--global-theme-color);
+}
+
+.publications ol.bibliography li .author a:hover {
+  border-bottom-style: solid;
+  text-decoration: none;
+}
+
+.publications ol.bibliography li .author > em {
+  border-bottom: 1px solid;
+  font-style: normal;
+}
+
+.publications ol.bibliography li .links {
+  margin-top: 0.25rem;
+}
+
+.publications ol.bibliography li .links a.btn {
+  color: var(--global-text-color);
+  border: 1px solid var(--global-text-color);
+  padding: 0.25rem 1rem;
+  margin-left: 0;
+  margin-right: 0.4rem;
+}
+
+.publications ol.bibliography li .links a.btn {
+  cursor: pointer;
+}
+
+.publications ol.bibliography li .links a.btn:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+
+/* Abstract / BibTeX panels opened by the "Abs" and "Bib" buttons */
+.publications ol.bibliography li .hidden {
+  font-size: 0.875rem;
+  max-height: 0;
+  overflow: hidden;
+  text-align: justify;
+  transition: all 0.15s ease;
+}
+
+.publications ol.bibliography li .hidden.open {
+  max-height: 100em;
+  margin-top: 0.5rem;
+}
+
+.publications ol.bibliography li .hidden p {
+  line-height: 1.5em;
+  margin: 10px;
+}
+
+.publications ol.bibliography li div.abstract.hidden {
+  border: dashed 1px var(--global-bg-color);
+}
+
+.publications ol.bibliography li div.abstract.hidden.open {
+  border-color: var(--global-text-color);
+}
+
+.publications ol.bibliography li .bibtex pre {
+  margin: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  line-height: 1.4em;
+  white-space: pre-wrap;
+  text-align: left;
+  color: var(--global-text-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 4px;
+}
+
+/* Footer */
+
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.75rem;
+  color: var(--global-text-color-light);
+}
+
+footer.sticky-bottom .container {
+  text-align: center;
+}

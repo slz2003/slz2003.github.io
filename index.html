@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<div class="post">
+  <article>
+    <div class="clearfix">
+      <div class="profile float-right">
+        <figure>
+          <img src="{{ site.profile_image | relative_url }}" class="img-fluid z-depth-1 rounded" alt="Lize Shao">
+        </figure>
+      </div>
+
+      <header class="post-header">
+        <h1 class="post-title"><span class="font-weight-bold">Lize Shao</span></h1>
+        <p class="desc">{{ site.affiliations | join: "<br>" }}</p>
+      </header>
+
+      <p>
+        Hi there! I'm a Ph.D. student in Computer Science at the
+        <a href="https://www.virginia.edu/" target="_blank" rel="noopener">University of Virginia</a>, advised by
+        Prof. <a href="https://wenxiwang.github.io/" target="_blank" rel="noopener">Wenxi Wang</a>.
+        I received my undergraduate degree from <a href="https://www.rice.edu/" target="_blank" rel="noopener">Rice University</a> in 2025,
+        with a dual degree in Mathematics and Computer Science, supported by the
+        <a href="https://engineering.rice.edu/academics/student-awards-scholarships" target="_blank" rel="noopener">Rice Trustee Distinguished Scholarship</a>.
+        During my undergraduate studies, I had the privilege of working with
+        Prof. <a href="https://cs.rice.edu/~xh37/index.html" target="_blank" rel="noopener">Xia Hu</a> and
+        Prof. <a href="https://bissyande.github.io/" target="_blank" rel="noopener">Tegawendé F. Bissyandé</a>.
+      </p>
+      <p>
+        My research focuses on <strong>trustworthy and controllable generative modeling</strong> across both autoregressive
+        and diffusion paradigms. I study how to build generative models that can incorporate constraints, structured
+        reasoning, and verifiable feedback as part of learning and generation, with the goal of improving reliability,
+        controllability, correctness, and verifiability. More broadly, I am interested in principled generative systems
+        that can reason about and satisfy complex specifications across domains, including code generation, theorem
+        proving, language and visual generation.
+      </p>
+      <p class="social-icons">
+        {% if site.email %}<a href="mailto:{{ site.email }}" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>{% endif %}
+        {% if site.website %}<a href="{{ site.website }}" title="Website" aria-label="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
+        {% if site.scholar %}<a href="{{ site.scholar }}" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>{% endif %}
+        {% if site.x %}<a href="{{ site.x }}" title="X" aria-label="X" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
+      </p>
+    </div>
+
+    <h2>news</h2>
+    <div class="news">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless">
+          {% for item in site.data.news limit: site.news_limit %}
+            <tr>
+              <th scope="row">{{ item.date }}</th>
+              <td>{{ item.content }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+
+    <h2><a href="{{ '/publications/' | relative_url }}">selected publications</a></h2>
+    <div class="publications">
+      <ol class="bibliography">
+        {% for pub in site.data.publications %}
+          {% if pub.selected %}{% include publication.html %}{% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+
+    <h2>education</h2>
+    <ul class="cv-list">
+      <li>
+        <span><strong>University of Virginia</strong><br><em>Ph.D. in Computer Science</em></span>
+        <span class="year">2025 – Present</span>
+      </li>
+      <li>
+        <span><strong>Rice University</strong><br><em>Dual Degree in Mathematics and Computer Science</em></span>
+        <span class="year">2021 – 2025</span>
+      </li>
+    </ul>
+
+    <h2>academic service</h2>
+    <ul class="cv-list">
+      <li><span><strong>Reviewer:</strong> ICLR 2027</span></li>
+      <li><span><strong>Sub-reviewer:</strong> ICSE 2027</span></li>
+    </ul>
+
+    <h2>selected awards</h2>
+    <ul class="cv-list">
+      <li>
+        <span>Rice University Trustee Distinguished Scholarship
+          <a href="https://engineering.rice.edu/academics/student-awards-scholarships" target="_blank" rel="noopener">[link]</a></span>
+        <span class="year">2021 – 2025</span>
+      </li>
+      <li>
+        <span>USA Mathematical Olympiad
+          <a href="https://www.momentumlearning.org/wp-content/uploads/2020/06/2020-AMO.pdf" target="_blank" rel="noopener">[link]</a></span>
+        <span class="year">2020</span>
+      </li>
+    </ul>
+  </article>
+</div>
