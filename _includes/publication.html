@@ -19,6 +19,11 @@
         <em><strong>{{ pub.venue }}.</strong></em>{% if pub.venue_full %} <em>{{ pub.venue_full }}</em>{% endif %}
       </div>
       <div class="links">
+        {% if pub.placeholder %}
+          <a class="btn btn-sm z-depth-0 placeholder" role="button" aria-disabled="true">Abs</a>
+          <a class="btn btn-sm z-depth-0 placeholder" role="button" aria-disabled="true">Paper</a>
+          <a class="btn btn-sm z-depth-0 placeholder" role="button" aria-disabled="true">Bib</a>
+        {% endif %}
         {% if pub.abstract %}<a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>{% endif %}
         {% if pub.paper %}<a href="{{ pub.paper }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">Paper</a>{% endif %}
         {% if pub.bibtex %}<a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>{% endif %}

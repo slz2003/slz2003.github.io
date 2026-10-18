@@ -6,6 +6,7 @@
 #   paper      - link for the "Paper" button
 #   abstract   - text for the "Abs" button (optional)
 #   bibtex     - text for the "Bib" button (optional)
+#   placeholder - true shows inactive Abs/Paper/Bib buttons (paper not public yet)
 
 - title: Constrained Code Generation with Discrete Diffusion
   abbr: NeurIPS 2026
@@ -170,6 +171,21 @@
       booktitle = {The Thirteenth International Conference on Learning Representations},
       year      = {2025}
     }
+
+- title: Self-Decomposing Diffusion for Code Generation
+  abbr: Preprint
+  venue: Preprint
+  year: 2026
+  preview: sddc.png
+  selected: true
+  placeholder: true
+  authors:
+    - name: Lize Shao
+      me: true
+    - name: Zichen Xie
+    - name: Zhizhen Chen
+    - name: Zhe Zeng
+    - name: Wenxi Wang
 
 - title: Detecting Inconsistencies in Model Specifications with LLM-as-Verifier Reasoning
   abbr: Preprint

@@ -383,6 +383,14 @@ html[data-theme="dark"] .publications h2.bibliography {
   border-color: var(--global-theme-color);
 }
 
+/* Inactive buttons for papers that are not public yet */
+.publications ol.bibliography li .links a.btn.placeholder,
+.publications ol.bibliography li .links a.btn.placeholder:hover {
+  cursor: default;
+  color: var(--global-text-color);
+  border-color: var(--global-text-color);
+}
+
 /* Abstract / BibTeX panels opened by the "Abs" and "Bib" buttons */
 .publications ol.bibliography li .hidden {
   font-size: 0.875rem;

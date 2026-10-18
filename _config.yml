@@ -32,4 +32,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - node_modules
+  - package-lock.json
+  - main.tex
   - README.md
